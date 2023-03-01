@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(11, 11, 33);
+}
+
+.card {
+  transition: all .2s ease;
+}
+
+.card img {
+  height: 35vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

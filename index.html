@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' rel='stylesheet'
+    integrity='sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD' crossorigin='anonymous'>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.1.96/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Mr. MickBurger</title>
+</head>
+
+<body>
+  <header class="container-fluid bg-primary">
+    <h2><i class="mdi mdi-menu"></i>Mr. Mick Burger 🍔</h2>
+  </header>
+  <main class="container">
+    <!-- SECTION layout -->
+    <section class="row">
+      <!-- STUB left side food items -->
+      <div class="col-8">
+        <!-- NOTE g-3 creates margin on top of the column and padding on it's x axis, only works if your content isn't the div, but is in the div -->
+        <section class="row g-3">
+
+          <div class="col-6">
+            <div class="card border-0">
+              <img
+                src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                alt="big burger">
+              <div class="p-2">
+                <h5>Big Baddie Burger</h5>
+                <div class="text-end">$9.00 <button class="btn btn-outline-primary"
+                    onclick="addBurger('Big Baddie Burger')"><i class="mdi mdi-cart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border-0">
+              <img
+                src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80"
+                alt="big burger">
+              <div class="p-2">
+                <h5>Bogus Burger</h5>
+                <div class="text-end">$12.00 <button class="btn btn-outline-primary"
+                    onclick="addBurger('Bogus Burger')"><i class="mdi mdi-cart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border-0">
+              <img
+                src="https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGJ1cmdlcnN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="big burger">
+              <div class="p-2">
+                <h5>Meat Tornado</h5>
+                <div class="text-end">$15.00 <button class="btn btn-outline-primary"
+                    onclick="addBurger('Meat Tornado')"><i class="mdi mdi-cart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card border-0">
+              <img
+                src="https://images.unsplash.com/photo-1602192103315-e6dbed88004a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGRlY29uc3RydWN0ZWQlMjBidXJnZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
+              <div class="p-2">
+                <h5>Twenty Dollar Burger</h5>
+                <div class="text-end">$19.99 <button class="btn btn-outline-primary"
+                    onclick="addBurger('Twenty Dollar Burger')"><i class="mdi mdi-cart"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      <!-- STUB right side 'cart'-->
+      <div class="col-4">
+        <section class="row bg-light rounded shadow">
+          <div class="col-12" id="items">
+
+            <!-- <p> Baddie Burger - 1 - $9.00</p> -->
+            <!-- <div class="item"><b>Baddie Burger</b> <span>1 -
+                $9.00</span><button class="btn text-danger" onclick="deleteBurger('Big Baddie Burger')"><i
+                  class="mdi mdi-delete"></i></button></div> -->
+
+          </div>
+          <div class="col-12 text-end">total $<span id="total"> 0.00</span></div>
+          <button class="col-12 btn btn-success" onclick="checkout()"><i class="mdi mdi-cash"></i> checkout</button>
+        </section>
+      </div>
+    </section>
+  </main>
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
